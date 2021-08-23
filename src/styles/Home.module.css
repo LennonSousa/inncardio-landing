@@ -1,0 +1,43 @@
+.top{
+  min-height: 600px;
+  background-size: cover;
+}
+
+.top span {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.title {
+  color: var(--white);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.title-highlight {
+  color: var(--black);
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.top span,
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,34 @@
+:root {
+  --background: #fbfbfb;
+  --background-dark: #dddddd;
+  --white: #f3f3f3;
+  --red: #C0272D;
+  -black: #12100F;
+}
+
+html,
+body,
+input,
+button,
+textarea {
+  padding: 0;
+  margin: 0;
+  font-family: Nunito, sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.row-grow {
+  flex-grow: 1;
+}
+
+.col-row{
+  flex-grow: 0;
+}
