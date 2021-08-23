@@ -1,0 +1,22 @@
+.whoCardContainer {
+  min-height: 400px;
+  border: var(--red-dark) 1px solid;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+.whoCardContainer img {
+  border-radius: 50%;
+}
+
+.whoCardRow {
+  min-height: 100%;
+  text-align: center;
+}
+
+.whoCardDescription {
+  color: var(--white);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+}

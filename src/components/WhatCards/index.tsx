@@ -2,12 +2,12 @@ import { Col, Row } from 'react-bootstrap';
 
 import styles from './styles.module.css';
 
-interface PageHeaderProps {
+interface WhatCardsProps {
     title: string;
     description: string;
 }
 
-const WhatCards: React.FC<PageHeaderProps> = ({ title, description }) => {
+const WhatCards: React.FC<WhatCardsProps> = ({ title, description }) => {
 
     return (
         <Col md={6} lg={4} className="py-1 px-4">

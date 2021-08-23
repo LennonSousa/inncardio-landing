@@ -8,6 +8,7 @@ import { FaGrinHearts } from 'react-icons/fa';
 
 import api from '../api/api';
 import WhatCards from '../components/WhatCards';
+import WhoCards from '../components/WhoCards';
 
 import styles from '../styles/Home.module.css';
 
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
       />
 
       <div>
-        <section className={styles.top} style={{ backgroundImage: `url(/assets/images/fundo-topo.svg)` }}>
+        <section id="subscribe" className={styles.top} style={{ backgroundImage: `url(/assets/images/fundo-topo.svg)` }}>
           <Container className="pt-5">
             <Row className="justify-content-center align-items-center text-center mb-3">
               <Col>
@@ -135,10 +136,10 @@ const Home: NextPage = () => {
         </section>
 
         <section className="mt-5">
-          <Container>
+          <Container className="py-5">
             <Row>
               <Col>
-                <h2 className={styles.sectionTitle}>O que você vai encontrar?</h2>
+                <h2 className={styles.sectionTitle}>O QUE VOCÊ VAI ENCONTRAR?</h2>
               </Col>
             </Row>
 
@@ -163,6 +164,52 @@ const Home: NextPage = () => {
               />
             </Row>
           </Container>
+        </section>
+
+        <section className={`${styles.whoSection} mt-5`}>
+          <Container className={styles.whoContainer}>
+            <Row>
+              <Col>
+                <h2 className={styles.sectionTitle}>PRA QUEM É?</h2>
+              </Col>
+            </Row>
+
+            <Row className="align-items-center mt-3">
+              <WhoCards
+                image="/assets/images/who-01.svg"
+                description="PARA O PROFISSIONAL DE EDUCAÇÃO FISICA (BACHAREL OU BACHAREL/LICENCIADO) 
+                QUE PRECISA DE FORÇA DE UMA BOA FRANQUIA PARA EMPREENDER."
+              />
+
+              <WhoCards
+                image="/assets/images/who-03.svg"
+                description="PARA O PROFISSIONAL QUE DESEJA INOVAR EM SUA REGIÃO COMO UM 
+                REPRESENTANTE FRANQUIADO DA INNCARDIO."
+              />
+
+              <WhoCards
+                image="/assets/images/who-02.svg"
+                description="PARA O PROFISSIONAL DE EDUCAÇÃO FÍSICA QUE ESTÁ EM 
+                FASE FINAL DA GRADUAÇÃO CURSANDO O BACHARELADO."
+              />
+            </Row>
+
+            <Row className="justify-content-center text-center mt-3">
+              <Col>
+                <Button
+                  variant="outline-light"
+                  type="button"
+                  size="lg"
+                  className="mt-4"
+                  onClick={() => { window.location.href = '#subscribe'; }}
+                >
+                  <span><FaGrinHearts /> Quero me inscrever agora</span>
+                </Button>
+              </Col>
+            </Row>
+          </Container>
+
+          <div style={{ backgroundImage: `url(/assets/images/shape-inverted.svg)` }} className={styles.whoShape}></div>
         </section>
 
       </div>
