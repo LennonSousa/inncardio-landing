@@ -1,0 +1,24 @@
+.whatCardContainer {
+  height: 200px;
+  border: var(--red) 1px solid;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+.whatCardRow {
+  min-height: 100%;
+  border-left: var(--red) 1px solid;
+  padding-left: 1rem;
+}
+
+.whatCardTitle {
+  color: var(--black);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.whatCardDescription {
+  color: var(--black);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}

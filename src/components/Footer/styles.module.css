@@ -1,3 +1,7 @@
+.footer{
+    background-size: cover;
+}
+
 .footerContainer {
     min-height: 300px;
 }
@@ -24,7 +28,7 @@
 }
 
 .footerBottomSection{
-    background-color: #002c2d;
+    background-color: var(--red-dark);
 }
 
 .footerBottomLink {

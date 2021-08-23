@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import { FaGrinHearts } from 'react-icons/fa';
 
 import api from '../api/api';
+import WhatCards from '../components/WhatCards';
 
 import styles from '../styles/Home.module.css';
 
@@ -44,18 +45,18 @@ const Home: NextPage = () => {
               </Col>
             </Row>
 
-            <Row className="justify-content-center align-items-center">
+            <Row className="justify-content-center align-items-center mb-3">
               <Col sm={10}>
                 <h1 className={styles.title}>COMO FATURAR DE 1 A 9 MIL AO MÊS DE RENDA EXTRA OU PRINCIPAL</h1>
               </Col>
             </Row>
 
             <Row className="justify-content-center align-items-center">
-              <Col sm={5}>
-                <Image fluid src="/assets/images/undraw_medicine_b1ol.svg" alt="App Inncardio." />
+              <Col className="mb-3" md={5}>
+                <Image fluid src="/assets/images/fitness-stats.svg" alt="App Inncardio." />
               </Col>
 
-              <Col sm={5}>
+              <Col className="mb-3" md={5}>
                 <Formik
                   initialValues={
                     {
@@ -68,7 +69,7 @@ const Home: NextPage = () => {
                     //setMessageShow(true);
 
                     try {
-                      await api.post('https://member.mailingboss.com/integration/webhook/613378:dd5390e5b7d4c87731429ddf1ff91221/01', {
+                      await api.post('integration/webhook/613378:dd5390e5b7d4c87731429ddf1ff91221/01', {
                         name: values.name,
                         email: values.email,
                       });
@@ -129,6 +130,37 @@ const Home: NextPage = () => {
                   )}
                 </Formik>
               </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="mt-5">
+          <Container>
+            <Row>
+              <Col>
+                <h2 className={styles.sectionTitle}>O que você vai encontrar?</h2>
+              </Col>
+            </Row>
+
+            <Row className="align-items-center mt-3">
+              <WhatCards
+                title="O TREINAMENTO COMPLETO"
+                description="PARA CAPTAR O CLIENTE CARDIOPATA
+                          E TRABALHAR O SEU FLUXO DE EXERCICIOS PERMITIDOS DENTRO DA AUTOAVALIÇÃO
+                          DE CADA CLIENTE."
+              />
+
+              <WhatCards
+                title="COMO OPERAR O NOSSO APLICATIVO"
+                description="PARA TE LEVAR A TER MAIORES ACERTOS 
+                E SE COLOCAR DE FORMA MAIS PROFISSIONAL EM SUA REGIÃO."
+              />
+
+              <WhatCards
+                title="AS PARCERIAS CERTAS"
+                description="COMO FRANQUIA QUE IRÃO TE IMPULSIONAR AO 
+                MELHOR CENARIO DE CONSTRUÇÃO DA SUA RENDA OU PRINCIPAL."
+              />
             </Row>
           </Container>
         </section>
