@@ -3,6 +3,6 @@ export default {
         type: 'website',
         locale: 'pt_BR',
         url: 'https://inscricao.inncardio.com.br/',
-        site_name: 'Inscrição App Inncardio',
+        site_name: 'Inscrição Inncardio',
     },
 };

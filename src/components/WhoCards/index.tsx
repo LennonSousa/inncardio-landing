@@ -10,13 +10,13 @@ interface WhoCardsProps {
 const WhoCards: React.FC<WhoCardsProps> = ({ image, description }) => {
 
     return (
-        <Col md={6} lg={4} className="py-1 px-4">
+        <Col md={6} lg={4} className="py-1 px-4 col-10">
             <Row>
                 <Col className={styles.whoCardContainer}>
-                    <Row className={`justify-content-center align-items-center ${styles.whoCardRow}`}>
+                    <Row className={`justify-content-center ${styles.whoCardRow}`}>
                         <Col>
                             <Row className="justify-content-center align-items-center mt-2">
-                                <Col sm={8}>
+                                <Col sm={8} className="col-7">
                                     <Image fluid src={image} alt={description} />
                                 </Col>
                             </Row>

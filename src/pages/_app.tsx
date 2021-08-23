@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { DefaultSeo, LogoJsonLd, NextSeo, SocialProfileJsonLd } from 'next-seo';
+import { CorporateContactJsonLd, DefaultSeo, LogoJsonLd, NextSeo, SocialProfileJsonLd } from 'next-seo';
 
 import SEO from '../config/next-seo-config';
 import Footer from '../components/Footer';
@@ -29,6 +29,20 @@ function MyApp({ Component, pageProps }: AppProps) {
       url="https://inscricao.inncardio.com.br/"
       sameAs={[
         'https://www.instagram.com/Francisco_pitanga/',
+      ]}
+    />
+
+    <CorporateContactJsonLd
+      url="https://inscricao.inncardio.com.br/"
+      logo="https://inscricao.inncardio.com.br/assets/images/inncardio-logo.png"
+      contactPoint={[
+        {
+          telephone: '+55-99-99109-1718',
+          contactType: 'reservations',
+          contactOption: 'TollFree',
+          areaServed: ['BR'],
+          availableLanguage: ['Portuguese'],
+        },
       ]}
     />
 

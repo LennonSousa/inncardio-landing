@@ -1,6 +1,12 @@
 .top{
   min-height: 600px;
+  background-image: linear-gradient(105deg,var(--black) 0%, rgb(36, 36, 36) 100%);
+}
+
+.topShape {
+  min-height: 100px;
   background-size: cover;
+  background-position-y: top;
 }
 
 .top span {
@@ -51,7 +57,7 @@
   color: var(--white);
 }
 
-.whoShape {
+.shape {
   height: 50px;
   background-size: cover;
   background-position-y: top;
@@ -59,4 +65,26 @@
 
 .whoContainer {
   padding: 4rem 0;
+}
+
+.aboutContainer {
+  background-size: cover;
+  margin: 5rem 0;
+}
+
+.aboutContainer h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--red);
+}
+
+.aboutContainer h4 {
+  font-size: .9rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.aboutContainer p {
+  font-size: .8rem;
+  font-weight: 400;
 }

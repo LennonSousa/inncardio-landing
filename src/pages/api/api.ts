@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_MAILINGBOSS_URL,
+    baseURL: process.env.NEXT_PUBLIC_SUBSCRIBE_API,
     timeout: 20000,
 });
 
