@@ -70,6 +70,7 @@
 .aboutContainer {
   background-size: cover;
   margin: 5rem 0;
+  background-repeat: no-repeat;
 }
 
 .aboutContainer h3 {

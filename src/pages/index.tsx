@@ -273,13 +273,13 @@ const Home: NextPage = () => {
               </Row>
             </Col>
 
-            <Col sm={4}>
+            <Col sm={4} className="col-8">
               <Image fluid src="/assets/images/francisco-pitanga.png" alt="DR. FRANCISCO PITANGA" />
             </Col>
           </Row>
 
           <Row className="justify-content-center align-items-center text-center mt-5">
-            <Col sm={4}>
+            <Col sm={4} className="col-8 mb-3">
               <Image fluid src="/assets/images/cristiano.png" alt="DR. CRISTIANO PITANGA" />
             </Col>
 
