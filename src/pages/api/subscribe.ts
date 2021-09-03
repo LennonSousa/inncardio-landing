@@ -13,12 +13,14 @@ export default async function handler(
   if (req.method === 'POST') {
     // Process a POST request
     const {
-      name,
+      fname,
+      phone,
       email,
     } = req.body;
 
-    const subscribe = await axios.post('https://member.mailingboss.com/integration/webhook/613378:dd5390e5b7d4c87731429ddf1ff91221/01', {
-      name,
+    const subscribe = await axios.post('https://app.mailingboss.com/lists/613224d4a7681/subscribe', {
+      fname,
+      phone,
       email,
     }, {
       headers: {

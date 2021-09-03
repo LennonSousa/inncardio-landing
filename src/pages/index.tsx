@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import { Button, Col, Container, Image, Form, Row } from 'react-bootstrap';
 import { Formik } from 'formik';
@@ -21,6 +22,8 @@ const validationSchema = Yup.object().shape({
 });
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   const [messageShow, setMessageShow] = useState(false);
   const [typeMessage, setTypeMessage] = useState<statusModal>("waiting");
 
@@ -67,8 +70,8 @@ const Home: NextPage = () => {
                 initialValues={
                   {
                     name: '',
-                    email: '',
                     phone: '',
+                    email: '',
                   }
                 }
                 onSubmit={async values => {
@@ -76,16 +79,17 @@ const Home: NextPage = () => {
                   setMessageShow(true);
 
                   try {
-                    const res = await api.post('subscribe', {
-                      name: values.name,
-                      email: values.email,
+                    await api.post('subscribe', {
+                      fname: values.name,
                       phone: values.phone,
+                      email: values.email,
                     });
 
                     setTypeMessage("success");
 
                     setTimeout(() => {
                       setMessageShow(false);
+                      router.push('/pending');
                     }, 2000);
                   }
                   catch (err) {
