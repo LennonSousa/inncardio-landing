@@ -9,6 +9,7 @@ import { FaGrinHearts } from 'react-icons/fa';
 import api from './api/api';
 import WhatCards from '../components/WhatCards';
 import WhoCards from '../components/WhoCards';
+import { cellphone } from '../components/InputMask/masks';
 import { AlertMessage, statusModal } from '../components/Interfaces/AlertMessage';
 
 import styles from '../styles/Home.module.css';
@@ -16,6 +17,7 @@ import styles from '../styles/Home.module.css';
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Obrigatório!'),
   email: Yup.string().email('E-mail inválido').required('Obrigatório!'),
+  phone: Yup.string().required('Obrigatório!'),
 });
 
 const Home: NextPage = () => {
@@ -66,6 +68,7 @@ const Home: NextPage = () => {
                   {
                     name: '',
                     email: '',
+                    phone: '',
                   }
                 }
                 onSubmit={async values => {
@@ -76,6 +79,7 @@ const Home: NextPage = () => {
                     const res = await api.post('subscribe', {
                       name: values.name,
                       email: values.email,
+                      phone: values.phone,
                     });
 
                     setTypeMessage("success");
@@ -97,7 +101,7 @@ const Home: NextPage = () => {
                 }}
                 validationSchema={validationSchema}
               >
-                {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
+                {({ handleChange, handleBlur, handleSubmit, values, setFieldValue, errors, touched }) => (
                   <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="subscribeFormGridName">
                       <Form.Control type="text"
@@ -109,6 +113,24 @@ const Home: NextPage = () => {
                         isInvalid={!!errors.name && touched.name}
                       />
                       <Form.Control.Feedback type="invalid">{touched.name && errors.name}</Form.Control.Feedback>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formLoginPhone">
+                      <Form.Control
+                        type="phone"
+                        placeholder="Seu whatsapp"
+                        maxLength={15}
+                        onChange={(e) => {
+                          setFieldValue('phone', cellphone(e.target.value));
+                        }}
+                        onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+                          setFieldValue('phone', cellphone(e.target.value));
+                        }}
+                        value={values.phone}
+                        name="phone"
+                        isInvalid={!!errors.phone && touched.phone}
+                      />
+                      <Form.Control.Feedback type="invalid">{touched.phone && errors.phone}</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="subscribeFormGridEmail">
@@ -155,7 +177,7 @@ const Home: NextPage = () => {
             <WhatCards
               title="O TREINAMENTO COMPLETO"
               description="PARA CAPTAR O CLIENTE CARDIOPATA
-                          E TRABALHAR O SEU FLUXO DE EXERCICIOS PERMITIDOS DENTRO DA AUTOAVALIÇÃO
+                          E TRABALHAR O SEU FLUXO DE EXERCÍCIOS PERMITIDOS DENTRO DA AUTOAVALIÇÃO
                           DE CADA CLIENTE."
             />
 
@@ -185,8 +207,8 @@ const Home: NextPage = () => {
           <Row className="justify-content-center align-items-center mt-3">
             <WhoCards
               image="/assets/images/who-01.svg"
-              description="PARA O PROFISSIONAL DE EDUCAÇÃO FISICA (BACHAREL OU BACHAREL/LICENCIADO) 
-                QUE PRECISA DE FORÇA DE UMA BOA FRANQUIA PARA EMPREENDER."
+              description="PARA O PROFISSIONAL DE EDUCAÇÃO FÍSICA (BACHAREL OU BACHAREL/LICENCIADO) 
+                QUE PRECISA DA FORÇA DE UMA BOA FRANQUIA PARA EMPREENDER."
             />
 
             <WhoCards
@@ -228,25 +250,50 @@ const Home: NextPage = () => {
             </Col>
           </Row>
 
-          <Row className="justify-content-center align-items-center text-center mt-3">
-            <Col sm={4}>
+          <Row className="justify-content-center align-items-center text-center mt-5">
+            <Col sm={5}>
               <Row>
                 <Col>
                   <h3>DR. FRANCISCO PITANGA</h3>
                   <h4>DIRETOR CIENTIFICO DA INNCARDIO , AUTOR</h4>
 
-                  <p>Sem perder tempo! Assim que você colocar o seu nome e email,
-                    não terá mais volta, depois da verdade ser revelada, você
-                    nunca mais verá o inglês do mesmo jeito. A cada semana irei
-                    liberar uma estratégia e mostrarei como você poderá implementar
-                    até que chegue em nosso treinamento no dia 02/08, para que você
-                    esteja pronto!</p>
+                  <p>Presidente do Departamento de Educação Física em Cardiologia (DEFIC) da
+                    Sociedade Brasileira de Cardiologia (SBC), regional Bahia.<br />
+                    Docente permanente do Programa de Pós Graduação em Ciências da Reabilitação
+                    (PPGREAB) do Instituto de Ciências da Saúde (ICS) da Universidade Federal da Bahia (UFBA).<br />
+                    Doutor em Saúde Pública pelo Instituto de Saúde Coletiva (ISC) da
+                    Universidade Federal da Bahia (UFBA).<br />
+                    Docente colaborador do Programa de Pós Graduação em Saúde Coletiva (PPGSC) do
+                    Instituto de Saúde Coletiva (ISC) da Universidade Federal da Bahia (UFBA).<br />
+                    Docente colaborador do Programa de Pós Graduação em Educação Física (PPGEF) da
+                    Universidade Estadual do Sudoeste da Bahia (UESB).<br />
+                    Autor dos livros “Epidemiologia Aplicada a Atividade Física” e "Testes, Medidas e
+                    Avaliação em Educação Física e Esportes”.</p>
                 </Col>
               </Row>
             </Col>
 
+            <Col sm={4}>
+              <Image fluid src="/assets/images/francisco-pitanga.png" alt="DR. FRANCISCO PITANGA" />
+            </Col>
+          </Row>
+
+          <Row className="justify-content-center align-items-center text-center mt-5">
+            <Col sm={4}>
+              <Image fluid src="/assets/images/cristiano.png" alt="DR. CRISTIANO PITANGA" />
+            </Col>
+
             <Col sm={5}>
-              <Image fluid src="/assets/images/undraw_businessman_97x4.svg" alt="" />
+              <Row>
+                <Col>
+                  <h3>DR. CRISTIANO PITANGA</h3>
+                  <h4>DIRETOR CIENTIFICO DA INNCARDIO , AUTOR</h4>
+
+                  <p>Doutor em Ciências do Esporte e Saúde (UTAD / UCB).<br />
+                    Diretor Geral da Clínica CLINMATTER: Emagrecimento e Saúde da Mulher.<br />
+                    Coordenador Geral da SPORTCLIN: Laboratório Baiano de Ciências do Esporte.</p>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
