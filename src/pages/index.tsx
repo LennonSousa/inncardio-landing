@@ -267,8 +267,8 @@ const Home: NextPage = () => {
                     Instituto de Saúde Coletiva (ISC) da Universidade Federal da Bahia (UFBA).<br />
                     Docente colaborador do Programa de Pós Graduação em Educação Física (PPGEF) da
                     Universidade Estadual do Sudoeste da Bahia (UESB).<br />
-                    Autor dos livros “Epidemiologia Aplicada a Atividade Física” e "Testes, Medidas e
-                    Avaliação em Educação Física e Esportes”.</p>
+                    Autor dos livros Epidemiologia Aplicada a Atividade Física e Testes, Medidas e
+                    Avaliação em Educação Física e Esportes.</p>
                 </Col>
               </Row>
             </Col>
