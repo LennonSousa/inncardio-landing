@@ -45,7 +45,7 @@ const Confirmed: NextPage = () => {
             </Col>
 
             <Col className="mb-3" md={5}>
-              <Image fluid src="/assets/images/fitness-stats.svg" alt="Inscrição confirmada." />
+              <Image fluid src="/assets/images/undraw_super_thank_you.svg" alt="Inscrição confirmada." />
             </Col>
           </Row>
         </Container>

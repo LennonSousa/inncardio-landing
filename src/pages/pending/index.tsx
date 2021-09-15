@@ -33,31 +33,15 @@ const Pending: NextPage = () => {
             <Col>
               <Row className="justify-content-center align-items-center text-center mb-3">
                 <Col>
-                  <span>NOSSAS BOAS-VINDAS AO</span>
+                  <span>PARABÉNS!</span>
                 </Col>
               </Row>
 
               <Row className="justify-content-center align-items-center mb-3">
                 <Col>
-                  <h1 className={styles.title}>Projeto de Profissionalização da InnCardio</h1>
+                  <h1 className={styles.title}>AGORA FALTA UM PASSO PARA TER A SUA OPORTUNIDADE!</h1>
                 </Col>
               </Row>
-            </Col>
-
-            <Col className="mb-3" md={5}>
-              <Image fluid src="/assets/images/fitness-stats.svg" alt="Confirme a sua inscrição." />
-            </Col>
-          </Row>
-        </Container>
-
-        <div style={{ backgroundImage: `url(/assets/images/shape.svg)` }} className={styles.topShape}></div>
-      </section>
-
-      <section className="mt-2">
-        <Container className="py-5">
-          <Row>
-            <Col>
-              <h2 className={styles.sectionTitle}>AGORA FALTA UM PASSO PARA TER A SUA OPORTUNIDADE!</h2>
             </Col>
           </Row>
 
@@ -84,7 +68,30 @@ const Pending: NextPage = () => {
             </Col>
           </Row>
 
-          <Row className="align-items-center mt-5">
+          <Row className="justify-content-center text-center align-items-center mt-3">
+            <Col>
+              <Button
+                variant="success"
+                type="button"
+                size="lg"
+                className="mt-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
+                }}
+              >
+                <span><FaWhatsapp /> ENTRAR NO GRUPO VIP DE OPORTUNIDADES</span>
+              </Button>
+            </Col>
+          </Row>
+        </Container>
+
+        <div style={{ backgroundImage: `url(/assets/images/shape.svg)` }} className={styles.topShape}></div>
+      </section>
+
+      <section>
+        <Container className="py-5">
+          <Row className="align-items-center">
             <WhatCards
               title="TE ENVIAMOS UM E-MAIL"
               description="ACESSE A SUA CAIXA DE ENTRADA OU PODE SER QUE ESTEJA
@@ -103,23 +110,6 @@ const Pending: NextPage = () => {
               SOBRE O NOSSO MODELO DE FRANQUIAS, VOCÊ TERÁ ACESSO AO
               MATERIAL."
             />
-          </Row>
-
-          <Row className="justify-content-center text-center align-items-center mt-3">
-            <Col>
-              <Button
-                variant="success"
-                type="button"
-                size="lg"
-                className="mt-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
-                }}
-              >
-                <span><FaWhatsapp /> ENTRAR NO GRUPO VIP DE OPORTUNIDADES</span>
-              </Button>
-            </Col>
           </Row>
         </Container>
       </section>

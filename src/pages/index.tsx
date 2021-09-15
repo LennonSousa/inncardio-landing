@@ -47,17 +47,17 @@ const Home: NextPage = () => {
       />
 
       <section id="subscribe" className={styles.top}>
-        <Container className="pt-5">
-          <Row className="justify-content-center align-items-center text-center mb-3">
+        <Container className="pt-5 text-center">
+          <Row className="justify-content-center align-items-center mb-4">
             <Col>
               <span>PROFISSIONAL DE EDUCAÇÃO FÍSICA</span>
             </Col>
           </Row>
 
-          <Row className="justify-content-center align-items-center mb-3">
+          <Row className="justify-content-center align-items-center mb-5">
             <Col sm={10}>
-              <h1 className={styles.title}>VÁ DE 1 A 9 MIL AO MÊS* COM O PROGRAMA DE CAPACITAÇÃO
-                PARA TRABALHAR COM CARDIOPATAS</h1>
+              <h1 className={styles.title}>VÁ DE 1 A 9 MIL AO MÊS*<br /> COM O PROGRAMA DE CAPACITAÇÃO</h1>
+              <span>PARA TRABALHAR COM CARDIOPATAS</span>
             </Col>
           </Row>
 
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
         <Container className={styles.whoContainer}>
           <Row>
             <Col>
-              <h2 className={styles.sectionTitle}>PRA QUEM É?</h2>
+              <h2 className={styles.sectionTitle}>PRA QUEM É A CAPACITAÇÃO?</h2>
             </Col>
           </Row>
 
