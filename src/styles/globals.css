@@ -5,6 +5,7 @@
   --red: #C0272D;
   --red-dark: #8A0005;
   --black: #12100F;
+  --gray-dark: #444444;
 }
 
 html,
@@ -34,4 +35,14 @@ a:hover {
 
 .col-row{
   flex-grow: 0;
+}
+
+.terms-card {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+  -webkit-box-shadow: 2px 2px 9px -4px var(--red-dark);
+  -moz-box-shadow: 2px 2px 9px -4px var(--red-dark);
+  box-shadow: 2px 2px 9px -4px var(--red-dark);
 }

@@ -56,7 +56,8 @@ const Home: NextPage = () => {
 
           <Row className="justify-content-center align-items-center mb-3">
             <Col sm={10}>
-              <h1 className={styles.title}>COMO FATURAR DE 1 A 9 MIL AO MÊS DE RENDA EXTRA OU PRINCIPAL</h1>
+              <h1 className={styles.title}>VÁ DE 1 A 9 MIL AO MÊS* COM O PROGRAMA DE CAPACITAÇÃO
+                PARA TRABALHAR COM CARDIOPATAS</h1>
             </Col>
           </Row>
 
@@ -193,8 +194,8 @@ const Home: NextPage = () => {
 
             <WhatCards
               title="AS PARCERIAS CERTAS"
-              description="COMO FRANQUIA QUE IRÃO TE IMPULSIONAR AO 
-                MELHOR CENARIO DE CONSTRUÇÃO DA SUA RENDA OU PRINCIPAL."
+              description="PARA O SUCESSO COMO FRANQUIA QUE IRÃO TE IMPULSIONAR AO 
+                MELHOR CENÁRIO DE CONSTRUÇÃO DA SUA RENDA EXTRA OU PRINCIPAL."
             />
           </Row>
         </Container>
@@ -218,7 +219,7 @@ const Home: NextPage = () => {
             <WhoCards
               image="/assets/images/who-03.svg"
               description="PARA O PROFISSIONAL QUE DESEJA INOVAR EM SUA REGIÃO COMO UM 
-                REPRESENTANTE FRANQUIADO DA INNCARDIO."
+                REPRESENTANTE FRANQUEADO DA INNCARDIO."
             />
 
             <WhoCards
@@ -259,7 +260,7 @@ const Home: NextPage = () => {
               <Row>
                 <Col>
                   <h3>DR. FRANCISCO PITANGA</h3>
-                  <h4>DIRETOR CIENTIFICO DA INNCARDIO , AUTOR</h4>
+                  <h4>DIRETOR CIENTÍFICO DA INNCARDIO , AUTOR</h4>
 
                   <p>Presidente do Departamento de Educação Física em Cardiologia (DEFIC) da
                     Sociedade Brasileira de Cardiologia (SBC), regional Bahia.<br />
@@ -291,7 +292,7 @@ const Home: NextPage = () => {
               <Row>
                 <Col>
                   <h3>DR. CRISTIANO PITANGA</h3>
-                  <h4>DIRETOR CIENTIFICO DA INNCARDIO , AUTOR</h4>
+                  <h4>DIRETOR CIENTÍFICO DA INNCARDIO , AUTOR</h4>
 
                   <p>Doutor em Ciências do Esporte e Saúde (UTAD / UCB).<br />
                     Diretor Geral da Clínica CLINMATTER: Emagrecimento e Saúde da Mulher.<br />
@@ -306,4 +307,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;

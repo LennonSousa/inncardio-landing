@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
 import WhatCards from '../../components/WhatCards';
 
 import styles from './styles.module.css';
 
-const Home: NextPage = () => {
+const Pending: NextPage = () => {
   return (
     <>
       <NextSeo
@@ -32,13 +33,13 @@ const Home: NextPage = () => {
             <Col>
               <Row className="justify-content-center align-items-center text-center mb-3">
                 <Col>
-                  <span>NOSSAS BOAS-VINDAS</span>
+                  <span>NOSSAS BOAS-VINDAS AO</span>
                 </Col>
               </Row>
 
               <Row className="justify-content-center align-items-center mb-3">
                 <Col>
-                  <h1 className={styles.title}>ao Projeto InnCardio</h1>
+                  <h1 className={styles.title}>Projeto de Profissionalização da InnCardio</h1>
                 </Col>
               </Row>
             </Col>
@@ -56,11 +57,35 @@ const Home: NextPage = () => {
         <Container className="py-5">
           <Row>
             <Col>
-              <h2 className={styles.sectionTitle}>CONFIRME A SUA INSCRIÇÃO</h2>
+              <h2 className={styles.sectionTitle}>AGORA FALTA UM PASSO PARA TER A SUA OPORTUNIDADE!</h2>
             </Col>
           </Row>
 
-          <Row className="align-items-center mt-3">
+          <Row className="justify-content-center text-center align-items-center mt-4">
+            <Col sm={6}>
+              <video
+                style={
+                  {
+                    maxWidth: '100%',
+                    height: 'auto',
+                    borderRadius: '5px'
+                  }
+                }
+                preload="auto"
+                crossOrigin="anonymous"
+                controls
+                title="Nossas Boas-vindas ao projeto"
+              >
+                <source src="https://media1.builderall.com/video_manager/videos/bjgV_1631663519.mp4" type="video/mp4" />
+              </video>
+            </Col>
+
+            <Col>
+              <h3 className={styles.titleHighlight}><FaYoutube size={40} /><br />VEJA O VIDEO RÁPIDO DO DR. FRANCISCO PITANGA - DIRETOR CIENTÍFICO InnCARDIO</h3>
+            </Col>
+          </Row>
+
+          <Row className="align-items-center mt-5">
             <WhatCards
               title="TE ENVIAMOS UM E-MAIL"
               description="ACESSE A SUA CAIXA DE ENTRADA OU PODE SER QUE ESTEJA
@@ -80,10 +105,27 @@ const Home: NextPage = () => {
               MATERIAL."
             />
           </Row>
+
+          <Row className="justify-content-center text-center align-items-center mt-3">
+            <Col>
+              <Button
+                variant="success"
+                type="button"
+                size="lg"
+                className="mt-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
+                }}
+              >
+                <span><FaWhatsapp /> ENTRAR NO GRUPO VIP DE OPORTUNIDADES</span>
+              </Button>
+            </Col>
+          </Row>
         </Container>
       </section>
     </>
   )
 }
 
-export default Home
+export default Pending;

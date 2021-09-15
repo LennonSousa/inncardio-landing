@@ -38,6 +38,10 @@
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
+.footer a:hover {
+    color: var(--background-dark) !important;
+}
+
 .footerBottomLink p {
     font-weight: 200;
     font-size: 12px;

@@ -51,7 +51,7 @@ function Footer() {
 
                                         <a
                                             className={styles.footerSectionText}
-                                            href="https://api.whatsapp.com/send?phone=+55"
+                                            href="https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             title="Nosso WhatsApp"
@@ -70,6 +70,14 @@ function Footer() {
                 <Container>
                     <Row className="pt-3">
                         <Col>
+                            <Row className="justify-content-center text-center">
+                                <Col className={styles.footerBottomLink}>
+                                    <p>*Os rendimentos citados neste site serão proporcional ao esforço e desenvolvimento
+                                        do trabalho de cada profissional, sendo necessário trabalho e
+                                        aplicação do método para atingir aos resultados propostos.</p>
+                                </Col>
+                            </Row>
+
                             <Row className="justify-content-center">
                                 <Col sm={2}>
                                     <Link href="/terms">

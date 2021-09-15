@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
-import * as Yup from 'yup';
-import { FaGrinHearts } from 'react-icons/fa';
+import { FaGift, FaWhatsapp } from 'react-icons/fa';
 
 import WhatCards from '../../components/WhatCards';
 
 import styles from './styles.module.css';
 
-const Home: NextPage = () => {
+const Confirmed: NextPage = () => {
   return (
     <>
       <NextSeo
@@ -41,7 +39,7 @@ const Home: NextPage = () => {
 
               <Row className="justify-content-center align-items-center mb-3">
                 <Col>
-                  <h1 className={styles.title}>A sua inscrição foi cofirmada</h1>
+                  <h1 className={styles.title}>Seu interesse está confirmado em nossa base!</h1>
                 </Col>
               </Row>
             </Col>
@@ -59,29 +57,42 @@ const Home: NextPage = () => {
         <Container className="py-5">
           <Row>
             <Col>
-              <h2 className={styles.sectionTitle}>CONFIRME A SUA INSCRIÇÃO</h2>
+              <h2 className={styles.sectionTitle}>APROVEITE A PRÉVIA DA OPORTUNIDADE InnCardio EXLCUSIVA!</h2>
             </Col>
           </Row>
 
-          <Row className="align-items-center mt-3">
-            <WhatCards
-              title="TE ENVIAMOS UM E-MAIL"
-              description="ACESSE A SUA CAIXA DE ENTRADA OU PODE SER QUE ESTEJA
-              NA CAIXA DE SPAN/LIXO ELETRÔNICO TAMBÉM."
-            />
+          <Row className="justify-content-center text-center align-items-center mt-3">
+            <Col sm={6} className="col-10 mt-5">
+              <span className={styles.titleHighlight}>GRUPO VIP NO WHATSAPP</span>
+              <Button
+                variant="success"
+                type="button"
+                size="lg"
+                className="mt-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
+                }}
+              >
+                <span><FaWhatsapp /> ENTRAR NO GRUPO DE OPORTUNIDADES</span>
+              </Button>
+            </Col>
 
-            <WhatCards
-              title="CONFIRME A SUA INSCRIÇÃO"
-              description="NA MENSAGEM QUE TE ENVIAMOS, CONTÉM TODAS AS
-              INSTRUÇÕES E O LINK PARA VOCÊ CONFIRMAR A SUA INSCRIÇÃO."
-            />
-
-            <WhatCards
-              title="TUDO CERTO"
-              description="APÓS CONFIRMAR O SEU INTERESSE PARA SABER MAIS
-              SOBRE O NOSSO MODELO DE FRANQUIAS, VOCÊ TERÁ ACESSO AO
-              MATERIAL."
-            />
+            <Col sm={6} className="col-10 mt-5">
+              <span className={styles.titleHighlight}>RESPONDA A PESQUISA</span>
+              <Button
+                variant="danger"
+                type="button"
+                size="lg"
+                className="mt-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://bit.ly/SOBREVOC%C3%8AP0010021', '_blank', 'noopener,noreferrer');
+                }}
+              >
+                <span><FaGift /> E GARANTA UM BÔNUS EXCLUSIVO</span>
+              </Button>
+            </Col>
           </Row>
         </Container>
       </section>
@@ -89,4 +100,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Confirmed;

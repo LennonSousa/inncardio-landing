@@ -21,8 +21,9 @@
   font-weight: 800;
 }
 
-.title-highlight {
-  color: var(--black);
+.titleHighlight {
+  color: var(--gray-dark);
+  font-weight: 700;
 }
 
 .title a {
