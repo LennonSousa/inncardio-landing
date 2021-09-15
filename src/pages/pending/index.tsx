@@ -72,11 +72,10 @@ const Pending: NextPage = () => {
                   }
                 }
                 preload="auto"
-                crossOrigin="anonymous"
                 controls
                 title="Nossas Boas-vindas ao projeto"
               >
-                <source src="https://media1.builderall.com/video_manager/videos/bjgV_1631663519.mp4" type="video/mp4" />
+                <source src="/assets/videos/pending-video.mp4" type="video/mp4" />
               </video>
             </Col>
 
