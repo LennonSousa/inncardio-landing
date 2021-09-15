@@ -63,35 +63,53 @@ const Confirmed: NextPage = () => {
 
           <Row className="justify-content-center text-center align-items-center mt-3">
             <Col sm={6} className="col-10 mt-5">
-              <span className={styles.titleHighlight}>GRUPO VIP NO WHATSAPP</span>
-              <Button
-                variant="success"
-                type="button"
-                size="lg"
-                className="mt-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
-                }}
-              >
-                <span><FaWhatsapp /> ENTRAR NO GRUPO DE OPORTUNIDADES</span>
-              </Button>
+              <Row>
+                <Col>
+                  <span className={styles.titleHighlight}>GRUPO VIP NO WHATSAPP</span>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <Button
+                    variant="success"
+                    type="button"
+                    size="lg"
+                    className="mt-4"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('https://chat.whatsapp.com/JyHuzdrqKScDfCDWQ1QrSz', '_blank', 'noopener,noreferrer');
+                    }}
+                  >
+                    <span><FaWhatsapp /> ENTRAR NO GRUPO DE OPORTUNIDADES</span>
+                  </Button>
+                </Col>
+              </Row>
             </Col>
 
             <Col sm={6} className="col-10 mt-5">
-              <span className={styles.titleHighlight}>RESPONDA A PESQUISA</span>
-              <Button
-                variant="danger"
-                type="button"
-                size="lg"
-                className="mt-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open('https://bit.ly/SOBREVOC%C3%8AP0010021', '_blank', 'noopener,noreferrer');
-                }}
-              >
-                <span><FaGift /> E GARANTA UM BÔNUS EXCLUSIVO</span>
-              </Button>
+              <Row>
+                <Col>
+                  <span className={styles.titleHighlight}>RESPONDA A PESQUISA</span>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <Button
+                    variant="danger"
+                    type="button"
+                    size="lg"
+                    className="mt-4"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('https://bit.ly/SOBREVOC%C3%8AP0010021', '_blank', 'noopener,noreferrer');
+                    }}
+                  >
+                    <span><FaGift /> E GARANTA UM BÔNUS EXCLUSIVO</span>
+                  </Button>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
