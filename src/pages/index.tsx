@@ -56,7 +56,7 @@ const Home: NextPage = () => {
 
           <Row className="justify-content-center align-items-center mb-5">
             <Col sm={10}>
-              <h1 className={styles.title}>VÁ DE 1 A 9 MIL AO MÊS*<br /> COM O PROGRAMA DE CAPACITAÇÃO</h1>
+              <h1 className={styles.title}>VÁ DE 1 A 9 MIL AO MÊS<br /> COM O PROGRAMA DE CAPACITAÇÃO</h1>
               <span>PARA TRABALHAR COM CARDIOPATAS</span>
             </Col>
           </Row>
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
         <Container className={styles.whoContainer}>
           <Row>
             <Col>
-              <h2 className={styles.sectionTitle}>PRA QUEM É A CAPACITAÇÃO?</h2>
+              <h2 className={styles.sectionTitle}>PARA QUEM É A CAPACITAÇÃO?</h2>
             </Col>
           </Row>
 
